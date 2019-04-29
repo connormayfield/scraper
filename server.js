@@ -25,7 +25,7 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scrapeDB";
 // mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 mongoose.connect(MONGODB_URI);
 
-var controller = require("./controller/Controller.js");
+var controller = require("./controller/controller.js");
 app.use(controller);
 
 /* listener */
