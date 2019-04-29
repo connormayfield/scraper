@@ -1,7 +1,7 @@
   /* Scrape */
 $(function(){
     $(document).on("click","#scrape",function(){
-        $("h4").text("Please wait to load ....")
+        $("h4").text("Please wait...")
         $.ajax({
             method: "GET",
             url: "/scrape"
