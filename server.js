@@ -21,8 +21,7 @@ app.set("view engine", "handlebars");
 
 // Connect to the Mongo DB
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scrapeDB";
-//scrapeData
-// mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+
 mongoose.connect(MONGODB_URI);
 //test
 
@@ -31,5 +30,5 @@ app.use(controller);
 
 /* listener */
 app.listen(3000, function() {
-  console.log("Port " + 3000);
+  console.log("Port " + PORT);
 });
