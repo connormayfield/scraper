@@ -1,0 +1,22 @@
+#content, #saved {
+  border: solid 3px black;
+  padding:20px;
+  margin: 20px;
+  text-align:center;
+}
+
+.btn-primary {
+  margin:10px;
+}
+
+#scrape {
+  margin-left: 800px;
+}
+
+.nav-link {
+  margin: 10px;
+}
+
+.navbar {
+  background-color: #9C0A0C !important;
+}

@@ -1,0 +1,20 @@
+{{>nav index=true}}
+<div id="wrapper">
+  <div id="articles">
+  {{#if dbArticle}}
+    {{#each dbArticle}}
+    <div>
+        <div id="content">
+            <h3>{{headline}}</h3>
+            <p>{{summary}}</p>
+            <button class="saved btn btn-primary" data-id="{{id}} "data-headline="{{headline}}" data-img="{{img}}" data-summary="{{summary}}" data-url="{{url}}" data-note="{{note}}" data-saved="{{saved}}">SAVE ARTICLE</button>
+            <a href="{{url}}" target="_blank"><button class="btn btn-primary">READ FULL ARTICLE</button></a>
+        </div>
+    </div>
+    {{/each}}
+  {{/if}}
+   {{#unless dbArticle}}
+   <h4>Press "Scrape New Articles" button to see articles.</h4>
+   {{/unless}}
+  </div>
+</div>

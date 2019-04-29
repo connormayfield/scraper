@@ -1,0 +1,41 @@
+{{>nav save=true}}
+<div id="wrapper">
+    <div id="saved">
+    {{#if dbArticle}}
+        {{#each dbArticle}}
+              <div id="saved">
+                  <h3>{{headline}}</h3>
+                  <p>{{summary}}</p>
+                  <button class="delete btn btn-primary" data-id="{{id}}">REMOVE FROM SAVED</button>
+                  <button class="notes btn btn-primary" data-id="{{id}}" data-title="{{notes.title}}" data-body="{{notes.body}}">ARTICLE NOTES</button>
+                  <a href="{{url}}" target="_blank"><button class="btn btn-primary">READ FULL ARTICLE</button></a>
+              </div>
+            </div>
+        {{/each}}
+    {{/if}}
+    {{#unless dbArticle}}
+        <h4>There are no articles saved.</h4>
+    {{/unless}}
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">title: <input type="text" id="note" name="title" placeholder="title"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <textarea type="text" style="width:100%" id="body" name="body" placeholder="text"></textarea>
+        </div>
+        <input id="hidden" type="hidden" name="id">
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" id="submit" class="btn btn-primary">Save changes</button>
+        </div>
+        </div>
+    </div>
+</div>
