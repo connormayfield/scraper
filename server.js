@@ -1,5 +1,8 @@
 /* port */
-var PORT = process.env.PORT || 3000;
+process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+};
+// var PORT = process.env.PORT || 3000;
 
 /* setting */
 var express = require("express");
@@ -28,6 +31,6 @@ var controller = require("./controller/Controller.js");
 app.use(controller);
 
 /* listener */
-app.listen(PORT, function() {
-  console.log("Port " + PORT);
+app.listen(3000, function() {
+  console.log("Port " + 3000);
 });
