@@ -12,7 +12,7 @@ var app = express();
 app.use(express.static("public"));
 
 /* parse request body as JSON */
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true));
 app.use(express.json());
 
 /* handlebars */
@@ -24,6 +24,7 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scrapeDB";
 //scrapeData
 // mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 mongoose.connect(MONGODB_URI);
+//test
 
 var controller = require("./controller/controller.js");
 app.use(controller);
